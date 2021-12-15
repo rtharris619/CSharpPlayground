@@ -2,6 +2,7 @@
 using CSharpPlayground.Challenges.DCP;
 using CSharpPlayground.Algorithms.Tries;
 using CSharpPlayground.Algorithms.Dynamic;
+using CSharpPlayground.Algorithms.Trees;
 
 namespace CSharpPlayground
 {
@@ -12,8 +13,7 @@ namespace CSharpPlayground
             //var p1 = new Problem1();
             //p1.Solve();
 
-            var x = new TestFibonacci();
-            x.Driver();
+            new TestBinaryTree().Driver();
         }
     }
 }
