@@ -5,6 +5,7 @@ using CSharpPlayground.Algorithms.Dynamic;
 using CSharpPlayground.Algorithms.Trees;
 using CSharpPlayground.Algorithms.Queues;
 using CSharpPlayground.Algorithms.Stacks;
+using CSharpPlayground.Algorithms.Search;
 
 namespace CSharpPlayground
 {
@@ -15,7 +16,7 @@ namespace CSharpPlayground
             //var p1 = new Problem1();
             //p1.Solve();
 
-            new TestStack().Driver();
+            new TestBinarySearch().Driver();
         }
     }
 }
