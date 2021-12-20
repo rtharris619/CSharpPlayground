@@ -6,6 +6,8 @@ using CSharpPlayground.Algorithms.Trees;
 using CSharpPlayground.Algorithms.Queues;
 using CSharpPlayground.Algorithms.Stacks;
 using CSharpPlayground.Algorithms.Search;
+using CSharpPlayground.Fundamentals;
+using CSharpPlayground.Algorithms.LinkedLists;
 
 namespace CSharpPlayground
 {
@@ -13,10 +15,7 @@ namespace CSharpPlayground
     {
         public static void Main()
         {
-            //var p1 = new Problem1();
-            //p1.Solve();
-
-            new TestBinarySearch().Driver();
+            new TestSLL().Driver();
         }
     }
 }
