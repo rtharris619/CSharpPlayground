@@ -8,6 +8,7 @@ using CSharpPlayground.Algorithms.Stacks;
 using CSharpPlayground.Algorithms.Search;
 using CSharpPlayground.Fundamentals;
 using CSharpPlayground.Algorithms.LinkedLists;
+using CSharpPlayground.Fundamentals.Generics;
 
 namespace CSharpPlayground
 {
