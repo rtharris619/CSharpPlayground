@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -40,6 +41,47 @@ namespace CSharpPlayground.FSharpForFun
             {
                 Console.Write(value + " ");
             }
+        }
+    }
+
+    public class WebPageDownloader
+    {
+        public TResult FetchUrl<TResult>(string url, Func<string, StreamReader, TResult> callback)
+        {
+            var req = WebRequest.Create(url);
+            using (var resp = req.GetResponse())
+            {
+                using (var stream = resp.GetResponseStream())
+                {
+                    using (var reader = new StreamReader(stream))
+                    {
+                        return callback(url, reader);
+                    }
+                }
+            }
+        }
+
+        public void Driver()
+        {
+            Func<string, StreamReader, string> myCallback = (url, reader) =>
+            {
+                var html = reader.ReadToEnd();
+                var html1000 = html.Substring(0, 1000);
+                Console.WriteLine("Downloaded {0}. First 1000 is {1}", url, html1000);
+                return html1000;
+            };
+
+            var downloader = new WebPageDownloader();
+            var google = downloader.FetchUrl("http://google.com", myCallback);
+
+            var sites = new List<string>
+            {
+                "http://www.bing.com",
+                "http://www.google.com",
+                "http://www.yahoo.com"
+            };
+
+            sites.ForEach(site => downloader.FetchUrl(site, myCallback));
         }
     }
 
