@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,10 +11,14 @@ namespace CSharpPlayground.DesignPatterns.SingleResponsibility
     {
         public void Driver()
         {
-            var j = new Journal();
-            j.AddEntry("I laughed today");
-            j.AddEntry("I didn't have lunch");
-            Console.WriteLine(j);
+            var journal = new Journal();
+            journal.AddEntry("I laughed today");
+            journal.AddEntry("I didn't have lunch");
+            Console.WriteLine(journal);
+
+            var persisence = new Persistence();
+            var filename = @"D:\Development\C#\CSharpPlayground\CSharpPlayground\DesignPatterns\SingleResponsibility\jounal.txt";
+            persisence.SaveToFile(journal, filename, true);
         }
     }
 
@@ -37,6 +42,17 @@ namespace CSharpPlayground.DesignPatterns.SingleResponsibility
         public override string ToString()
         {
             return string.Join(Environment.NewLine, entries);
+        }
+    }
+
+    public class Persistence
+    {
+        public void SaveToFile(Journal journal, string filename, bool overwrite = false)
+        {
+            if (overwrite || !File.Exists(filename))
+            {
+                File.WriteAllText(filename, journal.ToString());
+            }
         }
     }
 }
