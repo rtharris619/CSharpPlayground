@@ -24,7 +24,7 @@ namespace CSharpPlayground
             //new FSharpForFunDriver().Driver();
             //new HackerRank.Easy().Driver();
             //new BinarySearch.Easy().Driver();
-            new Factory().Driver();
+            new ObjectTrackingFactory().Driver();
         }
     }
 }
