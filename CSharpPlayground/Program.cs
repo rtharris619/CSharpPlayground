@@ -14,6 +14,7 @@ using CSharpPlayground.DesignPatterns.Creational.Factory;
 using CSharpPlayground.FSharpForFun;
 using HackerRank = CSharpPlayground.Challenges.HackerRank;
 using BinarySearch = CSharpPlayground.Challenges.BinarySearch;
+using TechSeries = CSharpPlayground.Challenges.TechSeries;
 
 namespace CSharpPlayground
 {
@@ -24,7 +25,8 @@ namespace CSharpPlayground
             //new FSharpForFunDriver().Driver();
             //new HackerRank.Easy().Driver();
             //new BinarySearch.Easy().Driver();
-            new ObjectTrackingFactory().Driver();
+            //new ObjectTrackingFactory().Driver();
+            new TechSeries.Session3.Session3().Driver();
         }
     }
 }
