@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Console;
 
 namespace CSharpPlayground.Challenges.TechSeries.Session1
 {
@@ -13,7 +14,7 @@ namespace CSharpPlayground.Challenges.TechSeries.Session1
 
         }
 
-        public void Example1()
+        private void Example1()
         {
 
         }
