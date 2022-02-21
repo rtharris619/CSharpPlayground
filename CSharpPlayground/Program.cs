@@ -26,7 +26,7 @@ namespace CSharpPlayground
             //new HackerRank.Easy().Driver();
             //new BinarySearch.Easy().Driver();
             //new ObjectTrackingFactory().Driver();
-            new TechSeries.Session7.Session7().Driver();
+            new TechSeries.Session8.Session8().Driver();
         }
     }
 }
