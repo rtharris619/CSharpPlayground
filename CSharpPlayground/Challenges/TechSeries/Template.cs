@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
 
-namespace CSharpPlayground.Challenges.TechSeries.Session1
+namespace CSharpPlayground.Challenges.TechSeries.SessionX
 {
-    public class Template
+    public class SessionX
     {
         public void Driver()
         {
