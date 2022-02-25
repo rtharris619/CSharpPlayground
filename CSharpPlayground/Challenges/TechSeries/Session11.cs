@@ -7,6 +7,7 @@ using static System.Console;
 
 namespace CSharpPlayground.Challenges.TechSeries.Session11
 {
+    // Reversing a linked list
     // O(n) time and space complexity when using Stack
     // O(n) time complexity and O(1) space complexity when using in-place pointer manipulation
 

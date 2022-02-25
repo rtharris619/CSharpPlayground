@@ -31,3 +31,10 @@ Finding the non-duplicate number (XOR - Using zor)
 
 ### Session 11:
 Reversing a linked list
+
+### Session 12:
+Maximum in a stack
+
+### Session 13 *:
+Course Schedule Problem (Detect Cycle / Circular reference)
+Uses DFS and Memoization
