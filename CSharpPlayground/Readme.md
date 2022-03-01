@@ -41,3 +41,7 @@ Uses DFS and Memoization
 
 ### Session 14:
 Pythagorean Triplets (a^2 + b^2 = c^2)
+
+### Session 15:
+Push Dominoes
+Greedy Algorithm
