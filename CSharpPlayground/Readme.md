@@ -48,3 +48,7 @@ Greedy Algorithm
 
 ### Session 16:
 Simple Calculator
+
+### Session 17
+Product of array except self
+Can't use division operator
