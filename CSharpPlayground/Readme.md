@@ -49,6 +49,15 @@ Greedy Algorithm
 ### Session 16:
 Simple Calculator
 
-### Session 17
+### Session 17:
 Product of array except self
 Can't use division operator
+
+### Session 18:
+Non-decreasing array with single modification
+
+### Session 19:
+Word Search from Matrix
+
+### Session 20*:
+Top K frequent elements
