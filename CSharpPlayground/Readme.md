@@ -1,6 +1,6 @@
 ﻿# Challenges
 
-## TechSeries Catalogue
+## Tech Series Catalogue
 
 ### Session2:
 Checking for a Valid Binary Search Tree
@@ -59,5 +59,6 @@ Non-decreasing array with single modification
 ### Session 19:
 Word Search from Matrix
 
-### Session 20*:
+### Session 20:
 Top K frequent elements
+Uses Heap data structure

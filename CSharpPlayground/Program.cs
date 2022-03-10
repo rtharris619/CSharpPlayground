@@ -6,12 +6,14 @@ using CSharpPlayground.Algorithms.Trees;
 using CSharpPlayground.Algorithms.Queues;
 using CSharpPlayground.Algorithms.Stacks;
 using CSharpPlayground.Algorithms.Search;
+using CSharpPlayground.Algorithms.Heaps;
 using CSharpPlayground.Fundamentals;
 using CSharpPlayground.Algorithms.LinkedLists;
 using CSharpPlayground.Fundamentals.Generics;
 using CSharpPlayground.DesignPatterns.DependencyInversion;
 using CSharpPlayground.DesignPatterns.Creational.Factory;
 using CSharpPlayground.FSharpForFun;
+using CSharpPlayground.Mathematics.Trigonometry;
 using HackerRank = CSharpPlayground.Challenges.HackerRank;
 using BinarySearch = CSharpPlayground.Challenges.BinarySearch;
 using TechSeries = CSharpPlayground.Challenges.TechSeries;
@@ -26,8 +28,10 @@ namespace CSharpPlayground
             //new HackerRank.Easy().Driver();
             //new BinarySearch.Easy().Driver();
             //new ObjectTrackingFactory().Driver();
-            new TechSeries.Session19.Session19().Driver();
+            new TechSeries.Session20.Session20().Driver();
             //new AbstractFactory().Driver();
+            //new MinHeapDriver().Driver();
+            //new Trigonometry().Driver();
         }
     }
 }
