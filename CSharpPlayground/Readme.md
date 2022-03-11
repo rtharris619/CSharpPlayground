@@ -65,3 +65,7 @@ Uses Heap data structure
 
 ### Session 21:
 Remove Kth Last Element from Linked List
+
+### Session 22:
+Balanced Brackets problem
+Uses Stack
