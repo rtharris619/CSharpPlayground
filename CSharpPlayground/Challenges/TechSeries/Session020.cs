@@ -18,7 +18,7 @@ namespace CSharpPlayground.Challenges.TechSeries.Session20
         private void Example1()
         {
             var numbers = new List<int> { 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 5, 6 };
-            var k = 3;
+            var k = 2;
             var result = TopKFrequent(numbers, k);
             WriteLine(string.Join(",", result));
         }

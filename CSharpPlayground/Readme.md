@@ -62,3 +62,6 @@ Word Search from Matrix
 ### Session 20:
 Top K frequent elements
 Uses Heap data structure
+
+### Session 21:
+Remove Kth Last Element from Linked List
