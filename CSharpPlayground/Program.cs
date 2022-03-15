@@ -17,6 +17,7 @@ using CSharpPlayground.Mathematics.Trigonometry;
 using HackerRank = CSharpPlayground.Challenges.HackerRank;
 using BinarySearch = CSharpPlayground.Challenges.BinarySearch;
 using TechSeries = CSharpPlayground.Challenges.TechSeries;
+using TestTiming = CSharpPlayground.Helpers.TestTiming;
 
 namespace CSharpPlayground
 {
@@ -28,10 +29,14 @@ namespace CSharpPlayground
             //new HackerRank.Easy().Driver();
             //new BinarySearch.Easy().Driver();
             //new ObjectTrackingFactory().Driver();
-            new TechSeries.Session22.Session22().Driver();
+
             //new AbstractFactory().Driver();
             //new MinHeapDriver().Driver();
             //new Trigonometry().Driver();
+
+            //new TestTiming().Driver();
+
+            new TechSeries.Session24.Session24().Driver();
         }
     }
 }

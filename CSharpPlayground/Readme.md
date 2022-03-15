@@ -69,3 +69,9 @@ Remove Kth Last Element from Linked List
 ### Session 22:
 Balanced Brackets problem
 Uses Stack
+
+## Session 23:
+Find the Kth largest element in a list
+
+### Session 24:
+Three sum
