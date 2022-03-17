@@ -36,7 +36,7 @@ namespace CSharpPlayground
 
             //new TestTiming().Driver();
 
-            new TechSeries.Session24.Session24().Driver();
+            new TechSeries.Session26.Session26().Driver();
         }
     }
 }

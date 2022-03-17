@@ -75,3 +75,11 @@ Find the Kth largest element in a list
 
 ### Session 24:
 Three sum
+
+### Session 25:
+Spiral Traversal
+Uses Matrix
+
+### Session 26:
+Unique Paths
+Uses dynamic programming
