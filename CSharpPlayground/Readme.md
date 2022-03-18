@@ -83,3 +83,11 @@ Uses Matrix
 ### Session 26:
 Unique Paths
 Uses dynamic programming
+
+### Session 27:
+Queue using stacks
+
+### Session 28:
+Remove 0-sum consecutive nodes
+Singly Linked lists
+More Advanced Problem
