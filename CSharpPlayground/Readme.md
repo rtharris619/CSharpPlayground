@@ -87,7 +87,10 @@ Uses dynamic programming
 ### Session 27:
 Queue using stacks
 
-### Session 28:
+### Session 28*:
 Remove 0-sum consecutive nodes
 Singly Linked lists
 More Advanced Problem
+
+### Session 29*:
+Merge K sorted linked lists
