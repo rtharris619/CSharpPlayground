@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace CSharpPlayground.Algorithms.Trees
 {
-    public class Node
+    public class Node<T>
     {
-        public Node? Left { get; set; } = null;
-        public Node? Right { get; set; } = null;
-        public char Value { get; set; }
+        public Node<T>? Left { get; set; } = null;
+        public Node<T>? Right { get; set; } = null;
+        public T Value { get; set; }
 
-        public Node(char value)
+        public Node(T value)
         {
             Value = value;
         }
@@ -20,10 +20,10 @@ namespace CSharpPlayground.Algorithms.Trees
 
     public class BinaryTree
     {
-        public List<char> DFSValues(Node root)
+        public List<char> DFSValues(Node<char> root)
         {
             var result = new List<char>();
-            var stack = new Stack<Node>();
+            var stack = new Stack<Node<char>>();
             stack.Push(root);
 
             while (stack.Any())
@@ -40,7 +40,7 @@ namespace CSharpPlayground.Algorithms.Trees
             return result;
         }
 
-        public List<char> DFSValuesRec(Node root)
+        public List<char> DFSValuesRec(Node<char> root)
         {
             if (root == null)
                 return new List<char>();
@@ -55,10 +55,10 @@ namespace CSharpPlayground.Algorithms.Trees
             return result;
         }
 
-        public List<char> BFSValues(Node root)
+        public List<char> BFSValues(Node<char> root)
         {
             var result = new List<char>();
-            var queue = new Queue<Node>();
+            var queue = new Queue<Node<char>>();
 
             queue.Enqueue(root);
 
@@ -86,12 +86,12 @@ namespace CSharpPlayground.Algorithms.Trees
                 d       e       f
 
             */
-            var a = new Node('a');
-            var b = new Node('b');
-            var c = new Node('c');
-            var d = new Node('d');
-            var e = new Node('e');
-            var f = new Node('f');
+            var a = new Node<char>('a');
+            var b = new Node<char>('b');
+            var c = new Node<char>('c');
+            var d = new Node<char>('d');
+            var e = new Node<char>('e');
+            var f = new Node<char>('f');
             a.Left = b;
             a.Right = c;
             b.Left = d;

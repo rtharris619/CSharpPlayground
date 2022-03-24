@@ -98,3 +98,7 @@ Merge K sorted linked lists
 ### Session 30:
 Generate Parentheses
 Uses recursion
+
+### Session 31:
+Depth of Binary Tree
+Uses recursion
