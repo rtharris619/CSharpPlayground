@@ -7,7 +7,7 @@ using static System.Console;
 
 namespace CSharpPlayground.Challenges.TechSeries.SessionX
 {
-    public class SessionX
+    public class Session
     {
         public void Driver()
         {

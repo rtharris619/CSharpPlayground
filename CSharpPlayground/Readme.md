@@ -94,3 +94,7 @@ More Advanced Problem
 
 ### Session 29*:
 Merge K sorted linked lists
+
+### Session 30:
+Generate Parentheses
+Uses recursion
