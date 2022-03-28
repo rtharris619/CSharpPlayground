@@ -102,3 +102,9 @@ Uses recursion
 ### Session 31:
 Depth of Binary Tree
 Uses recursion
+
+### Session 32*:
+Intersection of 2 linked lists
+
+### Session 33:
+Find first missing positive integer
