@@ -108,3 +108,7 @@ Intersection of 2 linked lists
 
 ### Session 33:
 Find first missing positive integer
+
+### Session 34:
+Meeting rooms
+Uses heap
