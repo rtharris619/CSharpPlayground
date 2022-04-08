@@ -7,6 +7,7 @@ using CSharpPlayground.Algorithms.Queues;
 using CSharpPlayground.Algorithms.Stacks;
 using CSharpPlayground.Algorithms.Search;
 using CSharpPlayground.Algorithms.Heaps;
+using Graphs = CSharpPlayground.Algorithms.Graphs;
 using CSharpPlayground.Fundamentals;
 using CSharpPlayground.Algorithms.LinkedLists;
 using CSharpPlayground.Fundamentals.Generics;
@@ -36,7 +37,9 @@ namespace CSharpPlayground
 
             //new TestTiming().Driver();
 
-            new TechSeries.Session34.Session().Driver();
+            new Graphs.UndirectedGraph().Driver();
+
+            //new TechSeries.Session35.Session().Driver();
         }
     }
 }

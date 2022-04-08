@@ -112,3 +112,11 @@ Find first missing positive integer
 ### Session 34:
 Meeting rooms
 Uses heap
+
+### Session 35:
+Sort colors
+
+### Session 36*:
+Number of Islands
+DFS
+Refer to Graph Algorithms section (TODO)
