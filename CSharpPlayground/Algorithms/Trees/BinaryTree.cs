@@ -18,12 +18,12 @@ namespace CSharpPlayground.Algorithms.Trees
         }
     }
 
-    public class BinaryTree
+    public class BinaryTree<T>
     {
-        public List<char> DFSValues(Node<char> root)
+        public List<T> DFSValues(Node<T> root)
         {
-            var result = new List<char>();
-            var stack = new Stack<Node<char>>();
+            var result = new List<T>();
+            var stack = new Stack<Node<T>>();
             stack.Push(root);
 
             while (stack.Any())
@@ -40,14 +40,14 @@ namespace CSharpPlayground.Algorithms.Trees
             return result;
         }
 
-        public List<char> DFSValuesRec(Node<char> root)
+        public List<T> DFSValuesRec(Node<T> root)
         {
             if (root == null)
-                return new List<char>();
+                return new List<T>();
             var rightValues = DFSValuesRec(root.Right);
             var leftValues = DFSValuesRec(root.Left);
 
-            var result = new List<char>();
+            var result = new List<T>();
             result.Add(root.Value);
             result.AddRange(leftValues);
             result.AddRange(rightValues);
@@ -55,10 +55,10 @@ namespace CSharpPlayground.Algorithms.Trees
             return result;
         }
 
-        public List<char> BFSValues(Node<char> root)
+        public List<T> BFSValues(Node<T> root)
         {
-            var result = new List<char>();
-            var queue = new Queue<Node<char>>();
+            var result = new List<T>();
+            var queue = new Queue<Node<T>>();
 
             queue.Enqueue(root);
 
@@ -74,11 +74,109 @@ namespace CSharpPlayground.Algorithms.Trees
 
             return result;
         }
+
+        public bool BFSIncludes(Node<T> root, T target)
+        {
+            if (root == null) return false;
+
+            var queue = new Queue<Node<T>>();
+            queue.Enqueue(root);
+
+            while (queue.Any())
+            {
+                var current = queue.Dequeue();
+                if (EqualityComparer<T>.Default.Equals(current.Value, target)) return true;
+
+                if (current.Left != null) queue.Enqueue(current.Left);
+                if (current.Right != null) queue.Enqueue(current.Right);
+            }
+
+            return false;
+        }
+
+        public bool DFSIncludes(Node<T> root, T target)
+        {
+            if (root == null) return false;
+
+            var stack = new Stack<Node<T>>();
+            stack.Push(root);
+
+            while (stack.Any())
+            {
+                var current = stack.Pop();
+                if (EqualityComparer<T>.Default.Equals(current.Value, target)) return true;
+
+                if (current.Left != null) stack.Push(current.Left);
+                if (current.Right != null) stack.Push(current.Right);
+            }
+
+            return false;
+        }
+
+        public bool DFSIncludesRecursive(Node<T> current, T target)
+        {
+            if (current == null) return false;
+
+            if (EqualityComparer<T>.Default.Equals(current.Value, target)) return true;
+
+            return DFSIncludesRecursive(current.Left, target) || DFSIncludesRecursive(current.Right, target);
+        }
+
+        public void WriteToConsole(List<T> values)
+        {
+            foreach (var val in values)
+            {
+                Console.Write(val + " ");
+            }
+        }
     }
 
     public class TestBinaryTree
     {
         public void Driver()
+        {
+            TestDFSIncludes();
+        }
+
+        private void TestDFSValues()
+        {
+            var tree = new BinaryTree<char>();
+            var root = ConstructBinaryTree();
+            
+            var result = tree.DFSValues(root);
+
+            tree.WriteToConsole(result);
+        }
+
+        private void TestBFSValues()
+        {
+            var tree = new BinaryTree<char>();
+            var root = ConstructBinaryTree();
+
+            var result = tree.BFSValues(root);
+
+            tree.WriteToConsole(result);
+        }
+
+        private void TestBFSIncludes()
+        {
+            var tree = new BinaryTree<char>();
+            var root = ConstructBinaryTree();
+
+            var result = tree.BFSIncludes(root, 'e');
+            Console.WriteLine(result);
+        }
+
+        private void TestDFSIncludes()
+        {
+            var tree = new BinaryTree<char>();
+            var root = ConstructBinaryTree();
+
+            var result = tree.DFSIncludesRecursive(root, 'j');
+            Console.WriteLine(result);
+        }
+
+        private Node<char> ConstructBinaryTree()
         {
             /*
                         a
@@ -98,21 +196,7 @@ namespace CSharpPlayground.Algorithms.Trees
             b.Right = e;
             c.Right = f;
 
-            var tree = new BinaryTree();
-            var result = tree.DFSValues(a);
-
-            foreach (var val in result)
-            {
-                Console.Write(val + " ");
-            }
-            Console.WriteLine();
-
-            var bfsResult = tree.BFSValues(a);
-
-            foreach (var val in bfsResult)
-            {
-                Console.Write(val + " ");
-            }
+            return a;
         }
     }
 }
