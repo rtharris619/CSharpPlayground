@@ -1,26 +1,14 @@
 ﻿
-using CSharpPlayground.Challenges.DCP;
-using CSharpPlayground.Algorithms.Tries;
-using CSharpPlayground.Algorithms.Dynamic;
+
 using Trees = CSharpPlayground.Algorithms.Trees;
-using CSharpPlayground.Algorithms.Queues;
-using CSharpPlayground.Algorithms.Stacks;
-using CSharpPlayground.Algorithms.Search;
-using CSharpPlayground.Algorithms.Heaps;
+
 using Graphs = CSharpPlayground.Algorithms.Graphs;
-using CSharpPlayground.Fundamentals;
-using CSharpPlayground.Algorithms.LinkedLists;
-using CSharpPlayground.Fundamentals.Generics;
-using CSharpPlayground.DesignPatterns.DependencyInversion;
-using CSharpPlayground.DesignPatterns.Creational.Factory;
-using CSharpPlayground.FSharpForFun;
-using CSharpPlayground.Mathematics.Trigonometry;
+using GraphTheoryTutorial = CSharpPlayground.Algorithms.Graphs.GraphTheoryTutorial;
 
 using HackerRank = CSharpPlayground.Challenges.HackerRank;
 using BinarySearch = CSharpPlayground.Challenges.BinarySearch;
 using TechSeries = CSharpPlayground.Challenges.TechSeries;
 using TestTiming = CSharpPlayground.Helpers.TestTiming;
-
 
 namespace CSharpPlayground
 {
@@ -43,7 +31,9 @@ namespace CSharpPlayground
 
             //new TechSeries.Session35.Session().Driver();
 
-            new Trees.TestBinaryTree().Driver();
+            //new Trees.TestBinaryTree().Driver();
+
+            new GraphTheoryTutorial.DepthFirstSearch().Driver();
         }
     }
 }

@@ -120,3 +120,8 @@ Sort colors
 Number of Islands
 DFS
 Refer to Graph Algorithms section (TODO)
+
+# Algorithms
+
+## Graph Theory Tutorial (https://www.youtube.com/watch?v=09_LlHjoEiY&t=1629s)
+
