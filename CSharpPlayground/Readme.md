@@ -119,7 +119,13 @@ Sort colors
 ### Session 36*:
 Number of Islands
 DFS
-Refer to Graph Algorithms section (TODO)
+Refer to Graph Algorithms section
+
+### Session 37:
+Get values of binary tree at a certain depth
+
+### Session 38*:
+Get whether binary tree is balanced
 
 # Algorithms
 

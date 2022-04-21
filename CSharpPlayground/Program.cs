@@ -29,11 +29,11 @@ namespace CSharpPlayground
 
             //new Graphs.UndirectedGraph().Driver();
 
-            //new TechSeries.Session35.Session().Driver();
+            new TechSeries.Session37.Session().Driver();
 
             //new Trees.TestBinaryTree().Driver();
 
-            new GraphTheoryTutorial.DepthFirstSearch().Driver();
+            //new GraphTheoryTutorial.DepthFirstSearch().Driver();
         }
     }
 }
