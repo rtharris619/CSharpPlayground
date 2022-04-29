@@ -124,8 +124,11 @@ Refer to Graph Algorithms section
 ### Session 37:
 Get values of binary tree at a certain depth
 
-### Session 38*:
+### Session 38:
 Get whether binary tree is balanced
+
+### Session 39*:
+Count number of universal subtrees
 
 # Algorithms
 

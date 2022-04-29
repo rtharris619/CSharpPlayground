@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <Folder Include="Challenges\CCI\" />
+    <Folder Include="Challenges\Codingame\" />
   </ItemGroup>
 
 </Project>
