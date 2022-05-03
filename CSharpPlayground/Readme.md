@@ -127,7 +127,7 @@ Get values of binary tree at a certain depth
 ### Session 38:
 Get whether binary tree is balanced
 
-### Session 39*:
+### Session 39:
 Count number of universal subtrees
 
 # Algorithms
