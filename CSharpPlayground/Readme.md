@@ -130,6 +130,9 @@ Get whether binary tree is balanced
 ### Session 39:
 Count number of universal subtrees
 
+### Session 40:
+Maximum depth of a tree without using recursion (tree is too large for example)
+
 # Algorithms
 
 ## Graph Theory Tutorial (https://www.youtube.com/watch?v=09_LlHjoEiY&t=1629s)
