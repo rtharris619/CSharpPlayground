@@ -133,6 +133,9 @@ Count number of universal subtrees
 ### Session 40:
 Maximum depth of a tree without using recursion (tree is too large for example)
 
+### Session 41*:
+Group words that are anagrams
+
 # Algorithms
 
 ## Graph Theory Tutorial (https://www.youtube.com/watch?v=09_LlHjoEiY&t=1629s)
