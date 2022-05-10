@@ -31,13 +31,13 @@ namespace CSharpPlayground
 
             //new Graphs.UndirectedGraph().Driver();
 
-            //new TechSeries.Session41.Session().Driver();
+            new TechSeries.Session42.Session().Driver();
 
             //new Trees.TestBinaryTree().Driver();
 
             //new GraphTheoryTutorial.DepthFirstSearch().Driver();
 
-            new Strings().Driver();
+            //new Strings().Driver();
         }
     }
 }
