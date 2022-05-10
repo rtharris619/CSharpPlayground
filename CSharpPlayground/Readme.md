@@ -1,6 +1,6 @@
 ﻿# Challenges
 
-## Tech Series Catalogue
+## Tech Series Catalogue (Session 2 - Session 103)
 
 ### Session2:
 Checking for a Valid Binary Search Tree
@@ -128,13 +128,16 @@ Get values of binary tree at a certain depth
 Get whether binary tree is balanced
 
 ### Session 39:
-Count number of universal subtrees
+Count number of universal (unival) subtrees
 
 ### Session 40:
 Maximum depth of a tree without using recursion (tree is too large for example)
 
-### Session 41*:
+### Session 41:
 Group words that are anagrams
+
+### Session 42:
+Minimum subarray length
 
 # Algorithms
 

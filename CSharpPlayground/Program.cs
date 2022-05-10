@@ -10,6 +10,8 @@ using BinarySearch = CSharpPlayground.Challenges.BinarySearch;
 using TechSeries = CSharpPlayground.Challenges.TechSeries;
 using TestTiming = CSharpPlayground.Helpers.TestTiming;
 
+using CSharpPlayground.Fundamentals;
+
 namespace CSharpPlayground
 {
     public class Program
@@ -29,11 +31,13 @@ namespace CSharpPlayground
 
             //new Graphs.UndirectedGraph().Driver();
 
-            new TechSeries.Session41.Session().Driver();
+            //new TechSeries.Session41.Session().Driver();
 
             //new Trees.TestBinaryTree().Driver();
 
             //new GraphTheoryTutorial.DepthFirstSearch().Driver();
+
+            new Strings().Driver();
         }
     }
 }

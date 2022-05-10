@@ -32,7 +32,14 @@ namespace CSharpPlayground.Challenges.TechSeries.Session41
                 "abc", "bcd", "cba", "cbd", "efg"
             };
 
-            GroupAnagramWordsFaster(words);
+            GroupAnagramWordsFaster(words).Display();
+        }
+
+        private string Hashkey(string word)
+        {
+            var charArray = word.ToCharArray();
+            Array.Sort(charArray);
+            return new string(charArray);
         }
 
         private List<List<string>> GroupAnagramWords(List<string> words)
@@ -41,22 +48,32 @@ namespace CSharpPlayground.Challenges.TechSeries.Session41
 
             foreach (var word in words)
             {
-                var charArray = word.ToCharArray();
-                Array.Sort(charArray);
-                var sortedWord = new string(charArray);
+                var key = Hashkey(word);
 
-                if (dictionaryGroups.ContainsKey(sortedWord))
+                if (dictionaryGroups.ContainsKey(key))
                 {
-                    dictionaryGroups[sortedWord].Add(word);
+                    dictionaryGroups[key].Add(word);
                 }
                 else
                 {
-                    dictionaryGroups[sortedWord] = new List<string>();
-                    dictionaryGroups[sortedWord].Add(word);
+                    dictionaryGroups[key] = new List<string>();
+                    dictionaryGroups[key].Add(word);
                 }
             }
 
             return dictionaryGroups.Values.ToList();
+        }
+
+        private string Haskkey2(string word)
+        {
+            var arr = Enumerable.Repeat(0, 26).ToArray();
+            foreach (var character in word)
+            {
+                arr[character - 'a'] = 1;
+            }
+            // 1 1 1 0 0 0 0 0... (abc, cba)
+
+            return string.Join("", arr);
         }
 
         private List<List<string>> GroupAnagramWordsFaster(List<string> words)
@@ -65,14 +82,16 @@ namespace CSharpPlayground.Challenges.TechSeries.Session41
 
             foreach (var word in words)
             {
-                var arr = Enumerable.Repeat(0, 26).ToArray();
-                foreach (var character in word)
+                var key = Haskkey2(word);
+                if (dictionaryGroups.ContainsKey(key))
                 {
-                    arr[character - 'a'] = 1;
+                    dictionaryGroups[key].Add(word);
                 }
-                // 1 1 1 000000000000000000... (abc, cba)
-
-               
+                else
+                {
+                    dictionaryGroups[key] = new List<string>();
+                    dictionaryGroups[key].Add(word);
+                }
             }
 
             return dictionaryGroups.Values.ToList();
