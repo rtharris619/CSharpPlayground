@@ -139,6 +139,9 @@ Group words that are anagrams
 ### Session 42:
 Minimum subarray length
 
+### Session 43*:
+Merging intervals
+
 # Algorithms
 
 ## Graph Theory Tutorial (https://www.youtube.com/watch?v=09_LlHjoEiY&t=1629s)
