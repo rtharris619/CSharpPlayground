@@ -139,10 +139,18 @@ Group words that are anagrams
 ### Session 42:
 Minimum subarray length
 
-### Session 43*:
+### Session 43:
 Merging intervals
+
+### Session 44:
+Maximum Subarray
+
+### Session 45:
+Array Intersection
+
+### Session 46*:
+Inverting a Binary Tree
 
 # Algorithms
 
 ## Graph Theory Tutorial (https://www.youtube.com/watch?v=09_LlHjoEiY&t=1629s)
-
