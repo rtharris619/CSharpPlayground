@@ -148,7 +148,7 @@ Maximum Subarray
 ### Session 45:
 Array Intersection
 
-### Session 46*:
+### Session 46:
 Inverting a Binary Tree
 
 # Algorithms

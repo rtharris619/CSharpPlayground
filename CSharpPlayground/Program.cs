@@ -31,7 +31,7 @@ namespace CSharpPlayground
 
             //new Graphs.UndirectedGraph().Driver();
 
-            new TechSeries.Session45.Session().Driver();
+            new TechSeries.Session46.Session().Driver();
 
             //new Trees.TestBinaryTree().Driver();
 
