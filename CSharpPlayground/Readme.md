@@ -151,6 +151,13 @@ Array Intersection
 ### Session 46:
 Inverting a Binary Tree
 
+### Session 47:
+Angles of a Clock
+
+### Session 48:
+Climbing Stairs
+Devolves to Fibonacci
+
 # Algorithms
 
 ## Graph Theory Tutorial (https://www.youtube.com/watch?v=09_LlHjoEiY&t=1629s)
