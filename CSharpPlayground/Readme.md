@@ -158,6 +158,9 @@ Angles of a Clock
 Climbing Stairs
 Devolves to Fibonacci
 
+### Session 49:
+Tree serialisation
+
 # Algorithms
 
 ## Graph Theory Tutorial (https://www.youtube.com/watch?v=09_LlHjoEiY&t=1629s)
