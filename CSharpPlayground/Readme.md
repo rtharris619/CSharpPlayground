@@ -165,6 +165,13 @@ Tree serialisation
 Longest substring without repeating characters
 Sliding window index solution
 
+### Session 51*:
+Circle of chained words
+Uses DFS
+
+### Session 52:
+Merge intervals problem
+
 # Algorithms
 
 ## Graph Theory Tutorial (https://www.youtube.com/watch?v=09_LlHjoEiY&t=1629s)
