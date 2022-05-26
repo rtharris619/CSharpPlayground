@@ -172,6 +172,9 @@ Uses DFS
 ### Session 52:
 Merge intervals problem
 
+### Session 53:
+Best time to buy and sell stock
+
 # Algorithms
 
 ## Graph Theory Tutorial (https://www.youtube.com/watch?v=09_LlHjoEiY&t=1629s)
