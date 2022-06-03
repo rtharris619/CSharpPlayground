@@ -31,7 +31,7 @@ namespace CSharpPlayground
 
             //new Graphs.UndirectedGraph().Driver();
 
-            //new TechSeries.Session55.Session().Driver();
+            new TechSeries.Session55.Session().Driver();
 
             //new Trees.TestBinaryTree().Driver();
 
@@ -39,7 +39,7 @@ namespace CSharpPlayground
 
             //new Strings().Driver();
 
-            new MaxHeapTest().Driver();
+            //new MaxHeapTest().Driver();
         }
     }
 }

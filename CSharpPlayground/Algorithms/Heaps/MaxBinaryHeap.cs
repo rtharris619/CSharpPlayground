@@ -15,6 +15,14 @@ namespace CSharpPlayground.Algorithms.Heaps
             Values = new List<int>();
         }
 
+        public void Heapify(List<int> values)
+        {
+            foreach (var value in values)
+            {
+                Push(value);
+            }
+        }
+
         private int GetParentIndex(int childIndex)
         {
             return (childIndex - 1) / 2;
