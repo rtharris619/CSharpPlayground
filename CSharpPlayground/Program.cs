@@ -1,5 +1,5 @@
 ﻿
-
+using MaxHeapTest = CSharpPlayground.Algorithms.Heaps.MaxBinaryHeapTest;
 using Trees = CSharpPlayground.Algorithms.Trees;
 
 using Graphs = CSharpPlayground.Algorithms.Graphs;
@@ -31,13 +31,15 @@ namespace CSharpPlayground
 
             //new Graphs.UndirectedGraph().Driver();
 
-            new TechSeries.Session55.Session().Driver();
+            //new TechSeries.Session55.Session().Driver();
 
             //new Trees.TestBinaryTree().Driver();
 
             //new GraphTheoryTutorial.DepthFirstSearch().Driver();
 
             //new Strings().Driver();
+
+            new MaxHeapTest().Driver();
         }
     }
 }
