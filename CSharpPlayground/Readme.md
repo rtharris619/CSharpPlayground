@@ -184,9 +184,11 @@ Find the Kth largest element in a list
 Quick Select algorithm (iterative)
 Can also use heap sort
 
-### Session 56*:
+### Session 56:
 Clone Trees
-TODO: Iterative version
+
+### Session 57:
+Level by level trees
 
 # Algorithms
 
