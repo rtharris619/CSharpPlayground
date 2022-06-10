@@ -189,6 +189,12 @@ Clone Trees
 
 ### Session 57:
 Level by level trees
+Uses BFS with Queues
+
+### Session 58*:
+Max connected colors in a grid (graph get max islands problem essentially)
+Uses DFS
+Stuck on iterative version *
 
 # Algorithms
 
