@@ -56,6 +56,14 @@ namespace CSharpPlayground.Algorithms.Heaps
             return 2 * key + 2;
         }
 
+        public void Heapify(List<int> values)
+        {
+            foreach (var value in values)
+            {
+                Push(value);
+            }
+        }
+
         public bool Push(int value)
         {
             if (CurrentHeapSize == Capacity)

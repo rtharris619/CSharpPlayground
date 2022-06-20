@@ -196,6 +196,10 @@ Max connected colors in a grid (graph get max islands problem essentially)
 Uses DFS
 Stuck on iterative version *
 
+### Session 59*:
+Closest Points to the Origin
+I need to create a Min Heap construct that supports tuples -> heapify on first element
+
 # Algorithms
 
 ## Graph Theory Tutorial (https://www.youtube.com/watch?v=09_LlHjoEiY&t=1629s)

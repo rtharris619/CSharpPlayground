@@ -64,12 +64,13 @@ namespace CSharpPlayground.Challenges.TechSeries.Session58
         public int MaxConnectedColoursIterative()
         {
             int max = 0;
+            var hashSet = new HashSet<string>();
 
             for (int r = 0; r < _Grid.Count; r++)
             {
                 for (int c = 0; c < _Grid[0].Count; c++)
                 {
-                    max = Math.Max(max, DFSIterative(r, c, new HashSet<string>()));
+                    max = Math.Max(max, DFSIterative(r, c, hashSet));
                 }
             }
 
@@ -113,15 +114,17 @@ namespace CSharpPlayground.Challenges.TechSeries.Session58
             while (stack.Count > 0)
             {
                 var current = stack.Pop();
+
                 if (visited.Contains(current)) continue;
 
                 visited.Add(current);
 
                 result +=1;
 
-                foreach (var neighbor in GetNeighbors(current[0], current[1]))
+                foreach (var neighbor in GetNeighbors(current[0], current[2]))
                 {
-                    stack.Push(neighbor[0] + "," + neighbor[1]);
+                    position = neighbor[0] + "," + neighbor[1];
+                    stack.Push(position);
                 }
             }
 
