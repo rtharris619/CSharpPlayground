@@ -200,6 +200,9 @@ Stuck on iterative version *
 Closest Points to the Origin
 I need to create a Min Heap construct that supports tuples -> heapify on first element
 
+### Session 60:
+Autocompletion
+
 # Algorithms
 
 ## Graph Theory Tutorial (https://www.youtube.com/watch?v=09_LlHjoEiY&t=1629s)
