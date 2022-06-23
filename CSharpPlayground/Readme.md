@@ -206,6 +206,11 @@ Autocompletion
 ### Session 61:
 Fibonacci new solution
 
+### Session 62:
+Roman Numerals to Decimal
+
+### Session 65
+
 # Algorithms
 
 ## Graph Theory Tutorial (https://www.youtube.com/watch?v=09_LlHjoEiY&t=1629s)
