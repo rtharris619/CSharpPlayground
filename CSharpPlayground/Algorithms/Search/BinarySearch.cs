@@ -13,7 +13,7 @@ namespace CSharpPlayground.Algorithms.Search
             if (left > right)
                 return false;
 
-            var midpoint = (int)Math.Floor((double)((left + right) / 2));
+            var midpoint = GetPivotPoint(left, right);
 
             if (array[midpoint] == target)
                 return true;
@@ -23,11 +23,38 @@ namespace CSharpPlayground.Algorithms.Search
             else
                 return PerformBinarySearch(array, target, midpoint + 1, right);
         }
+
+        public bool IterativeBinarySearch(List<int> list, int item)
+        {
+            var low = 0;
+            var high = list.Count - 1;
+
+            while (low <= high)
+            {
+                var pivot = GetPivotPoint(low, high);
+                var guess = list[pivot];
+                if (guess == item) return true;
+                if (guess > item) high = pivot - 1;
+                else low = pivot + 1;
+            }
+
+            return false;
+        }
+
+        private int GetPivotPoint(int low, int high)
+        {
+            return (int)Math.Floor((double)((low + high) / 2));
+        }
     }
 
     public class TestBinarySearch
     {
         public void Driver()
+        {
+            Example2();
+        }
+
+        private void Example1()
         {
             var array = Enumerable.Range(1, 10).ToList();
             var target = 3;
@@ -36,6 +63,13 @@ namespace CSharpPlayground.Algorithms.Search
 
             var bs = new BinarySearch();
             Console.WriteLine(bs.PerformBinarySearch(array, target, left, right));
+        }
+
+        private void Example2()
+        {
+            var bs = new BinarySearch();
+            var list = new List<int> { 1, 3, 5, 7, 9 };
+            Console.WriteLine(bs.IterativeBinarySearch(list, 1));
         }
     }
 }

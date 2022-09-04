@@ -12,6 +12,8 @@ using TestTiming = CSharpPlayground.Helpers.TestTiming;
 
 using CSharpPlayground.Fundamentals;
 
+using Search = CSharpPlayground.Algorithms.Search;
+
 namespace CSharpPlayground
 {
     public class Program
@@ -31,7 +33,7 @@ namespace CSharpPlayground
 
             //new Graphs.UndirectedGraph().Driver();
 
-            new TechSeries.Session62.Session().Driver();
+            //new TechSeries.Session62.Session().Driver();
 
             //new Trees.TestBinaryTree().Driver();
 
@@ -40,6 +42,8 @@ namespace CSharpPlayground
             //new Strings().Driver();
 
             //new MaxHeapTest().Driver();
+
+            new Search.TestBinarySearch().Driver();
         }
     }
 }

@@ -210,6 +210,8 @@ Fibonacci new solution
 Roman Numerals to Decimal
 
 ### Session 65
+Longest consecutive 1's in a binary number converted from a decimal number
+Uses bit shifting
 
 # Algorithms
 
