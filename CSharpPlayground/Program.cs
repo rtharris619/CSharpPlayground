@@ -10,9 +10,12 @@ using BinarySearch = CSharpPlayground.Challenges.BinarySearch;
 using TechSeries = CSharpPlayground.Challenges.TechSeries;
 using TestTiming = CSharpPlayground.Helpers.TestTiming;
 
+using CustomArray = CSharpPlayground.DataStructures.Arrays;
+
 using CSharpPlayground.Fundamentals;
 
 using Search = CSharpPlayground.Algorithms.Search;
+using Sort = CSharpPlayground.Algorithms.Sort;
 
 namespace CSharpPlayground
 {
@@ -43,7 +46,12 @@ namespace CSharpPlayground
 
             //new MaxHeapTest().Driver();
 
-            new Search.TestBinarySearch().Driver();
+            //new Search.TestBinarySearch().Driver();
+
+            //new Sort.SelectionSort().Driver();
+            //new Sort.QuickSort().Driver();
+
+            new CustomArray.TestCustomArray().Driver();
         }
     }
 }
