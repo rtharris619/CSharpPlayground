@@ -16,4 +16,9 @@
     <Folder Include="Challenges\Codingame\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Hangfire.Core" Version="1.7.34" />
+    <PackageReference Include="Hangfire.MemoryStorage" Version="1.7.0" />
+  </ItemGroup>
+
 </Project>

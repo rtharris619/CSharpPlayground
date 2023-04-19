@@ -13,9 +13,12 @@ using TestTiming = CSharpPlayground.Helpers.TestTiming;
 using CustomArray = CSharpPlayground.DataStructures.Arrays;
 
 using CSharpPlayground.Fundamentals;
+using CSharpPlayground.Fundamentals.Linq;
 
 using Search = CSharpPlayground.Algorithms.Search;
 using Sort = CSharpPlayground.Algorithms.Sort;
+
+using HangfireLib = CSharpPlayground.Libraries;
 
 namespace CSharpPlayground
 {
@@ -42,7 +45,7 @@ namespace CSharpPlayground
 
             //new GraphTheoryTutorial.DepthFirstSearch().Driver();
 
-            //new Strings().Driver();
+            new HangfireLib.HangfireTest().Driver();
 
             //new MaxHeapTest().Driver();
 
@@ -51,7 +54,7 @@ namespace CSharpPlayground
             //new Sort.SelectionSort().Driver();
             //new Sort.QuickSort().Driver();
 
-            new CustomArray.TestCustomArray().Driver();
+            //new CustomArray.TestCustomArray().Driver();
         }
     }
 }

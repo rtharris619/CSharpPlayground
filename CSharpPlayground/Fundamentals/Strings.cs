@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,14 @@ namespace CSharpPlayground.Fundamentals
     {
         public void Driver()
         {
-            SplitWord();
+
+        }
+
+        private void TrimString()
+        {
+            var bpNumber = "0000937644";
+
+            Console.WriteLine(bpNumber.TrimStart('0'));
         }
 
         private void SplitWord()
@@ -33,7 +41,7 @@ namespace CSharpPlayground.Fundamentals
                         if (char.IsLower(previous.Value) && char.IsLower(next.Value)) split = true;
                         if (char.IsUpper(previous.Value) && char.IsLower(next.Value)) split = true;
                     }
-                        
+
                     if (previous != null)
                     {
                         if (char.IsDigit(previous.Value)) split = true;
@@ -46,7 +54,7 @@ namespace CSharpPlayground.Fundamentals
                     {
                         if (char.IsLetter(previous.Value)) split = true;
                     }
-                }                
+                }
 
                 sentenceSb.Append(split ? " " + letters[i] : letters[i]);
             }
