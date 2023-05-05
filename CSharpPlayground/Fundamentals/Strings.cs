@@ -11,6 +11,15 @@ namespace CSharpPlayground.Fundamentals
     {
         public void Driver()
         {
+            TestForNulls();
+        }
+
+        private void TestForNulls()
+        {
+            string description = null;
+
+            string temp = description?.Trim();
+
 
         }
 
