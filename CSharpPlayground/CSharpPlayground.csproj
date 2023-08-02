@@ -8,12 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="DesignPatterns\SingleResponsibility\jounal.txt" />
+    <Compile Remove="Challenges\CCI\**" />
+    <Compile Remove="Challenges\Codingame\**" />
+    <EmbeddedResource Remove="Challenges\CCI\**" />
+    <EmbeddedResource Remove="Challenges\Codingame\**" />
+    <None Remove="Challenges\CCI\**" />
+    <None Remove="Challenges\Codingame\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Challenges\CCI\" />
-    <Folder Include="Challenges\Codingame\" />
+    <None Remove="DesignPatterns\SingleResponsibility\jounal.txt" />
   </ItemGroup>
 
   <ItemGroup>
