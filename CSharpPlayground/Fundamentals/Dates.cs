@@ -13,7 +13,9 @@ namespace CSharpPlayground.Fundamentals
         {
             //Translate();
 
-            TranslateSpecificDate(DateTime.Now);
+            //TranslateSpecificDate(DateTime.Now);
+
+            TestFileNameConversion();
         }
 
         public enum MonthAfrikaans
@@ -59,6 +61,36 @@ namespace CSharpPlayground.Fundamentals
         {
             var result = (MonthAfrikaans)Enum.Parse(typeof(MonthAfrikaans), date.Month.ToString());
             Console.WriteLine(result);
+        }
+
+        private void TestDateRange(int countMonthsBack = 6)
+        {
+            var lastMonth = DateTime.Now.AddMonths(-1);
+            var month = lastMonth.Month;
+            var year = lastMonth.Year;
+            var daysInMonth = DateTime.DaysInMonth(year, month);
+
+            var dateFrom = DateTime.Now.AddMonths(-countMonthsBack);
+            dateFrom = new DateTime(dateFrom.Year, dateFrom.Month, 1);
+
+            var dateTo = new DateTime(year, month, daysInMonth);
+
+            Console.WriteLine(dateFrom.ToShortDateString() + " - " + dateTo.ToShortDateString());
+        }
+
+        private void TestFileNameConversion()
+        {
+            var statementsBasePath = "SAP_STMT_";
+            var statementDate = new DateTime(2023, 8, 1);
+            var bp = "909593";
+
+            var result = GetStatementFilePath(statementDate, statementsBasePath, bp);
+            Console.WriteLine(result);
+        }
+
+        public string GetStatementFilePath(DateTime date, string baseStatementsPath, string BusinessPartnerNumber)
+        {
+            return string.Concat(baseStatementsPath, date.ToString("yyyy"), $"{date.ToString("MM")}_", BusinessPartnerNumber, ".pdf");
         }
     }
 }
