@@ -8,6 +8,27 @@ namespace CSharpPlayground.Algorithms.Search
 {
     public class BinarySearch
     {
+        public int PerformBinarySearch(int[] arr, int target)
+        {
+            int left = 0;
+            int right = arr.Length - 1;
+
+            while (left <= right) 
+            { 
+                int mid = left + (right - left) / 2;
+
+                if (arr[mid] == target) 
+                    return mid;
+
+                if (arr[mid] < target)
+                    left = mid + 1;
+                else
+                    right = mid - 1;
+            }
+
+            return -1;
+        }
+
         public bool PerformBinarySearch(List<int> array, int target, int left, int right)
         {
             if (left > right)
@@ -51,7 +72,7 @@ namespace CSharpPlayground.Algorithms.Search
     {
         public void Driver()
         {
-            Example2();
+            Example3();
         }
 
         private void Example1()
@@ -70,6 +91,18 @@ namespace CSharpPlayground.Algorithms.Search
             var bs = new BinarySearch();
             var list = new List<int> { 1, 3, 5, 7, 9 };
             Console.WriteLine(bs.IterativeBinarySearch(list, 1));
+        }
+
+        private void Example3()
+        {
+            var bs = new BinarySearch();
+            var list = new List<int> { 1, 3, 5, 7, 9 };
+            var target = 7;
+            var result = bs.PerformBinarySearch(list.ToArray(), target);
+            if (result >= 0) 
+            {
+                Console.WriteLine($"{target} found at index {result}. Answer: {list[result]}");
+            }
         }
     }
 }

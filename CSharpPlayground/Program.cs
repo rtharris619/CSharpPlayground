@@ -49,7 +49,7 @@ namespace CSharpPlayground
 
             //new MaxHeapTest().Driver();
 
-            //new Search.TestBinarySearch().Driver();
+            new Search.TestBinarySearch().Driver();
 
             //new Sort.SelectionSort().Driver();
             //new Sort.QuickSort().Driver();
@@ -60,7 +60,7 @@ namespace CSharpPlayground
 
             //new WorkingWithNulls().Driver();
 
-            new Dates().Driver();
+            //new Dates().Driver();
 
             //new Dictionaries().Driver();
         }
