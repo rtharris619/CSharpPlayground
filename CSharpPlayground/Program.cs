@@ -14,6 +14,7 @@ using CustomArray = CSharpPlayground.DataStructures.Arrays;
 
 using CSharpPlayground.Fundamentals;
 using CSharpPlayground.Fundamentals.Linq;
+using AsyncProgramming = CSharpPlayground.Fundamentals.Asynchronous;
 
 using Search = CSharpPlayground.Algorithms.Search;
 using Sort = CSharpPlayground.Algorithms.Sort;
@@ -24,7 +25,7 @@ namespace CSharpPlayground
 {
     public class Program
     {
-        public static void Main()
+        public static async Task Main()
         {
             //new FSharpForFunDriver().Driver();
             //new HackerRank.Easy().Driver();
@@ -49,7 +50,7 @@ namespace CSharpPlayground
 
             //new MaxHeapTest().Driver();
 
-            new Search.TestBinarySearch().Driver();
+            //new Search.TestBinarySearch().Driver();
 
             //new Sort.SelectionSort().Driver();
             //new Sort.QuickSort().Driver();
@@ -63,6 +64,8 @@ namespace CSharpPlayground
             //new Dates().Driver();
 
             //new Dictionaries().Driver();
+
+            await new AsyncProgramming.Asynchronous().Driver();
         }
     }
 }
