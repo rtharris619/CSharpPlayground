@@ -8,16 +8,11 @@ using System.Threading.Tasks;
 namespace CSharpPlayground.Fundamentals.Asynchronous
 {
     public class Asynchronous
-    {
-        
-
+    {       
         public async Task Driver()
         {
-            //var test = new AsyncBreakfast();
             await AsyncBreakfast.TestAsync4();
         }
-
-        
     }
 
     internal class AsyncBreakfast
