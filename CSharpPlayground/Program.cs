@@ -55,6 +55,8 @@ namespace CSharpPlayground
             //new Sort.SelectionSort().Driver();
             //new Sort.QuickSort().Driver();
 
+            new Sort.BubbleSort().Driver();
+
             //new CustomArray.TestCustomArray().Driver();
 
             //new Strings().Driver();
@@ -65,7 +67,7 @@ namespace CSharpPlayground
 
             //new Dictionaries().Driver();
 
-            await new AsyncProgramming.Asynchronous().Driver();            
+            //await new AsyncProgramming.Asynchronous().Driver();            
         }
     }
 }

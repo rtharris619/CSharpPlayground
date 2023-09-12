@@ -49,7 +49,7 @@ namespace CSharpPlayground.Algorithms.Sort
         {
             var array = new List<int> { 5, 3, 6, 2, 10 };   
             var sortedList = PerformSelectionSort(array);
-            Console.WriteLine(String.Join(',', sortedList));
+            Console.WriteLine(string.Join(',', sortedList));
         }
     }
 }

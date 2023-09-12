@@ -29,7 +29,7 @@ namespace CSharpPlayground.Algorithms.Sort
         {
             var array = new List<int> { 10, 5, 2, 2, 3 };
             var sortedList = PerformQuickSort(array);
-            Console.WriteLine(String.Join(',', sortedList));
+            Console.WriteLine(string.Join(',', sortedList));
         }
     }
 }
