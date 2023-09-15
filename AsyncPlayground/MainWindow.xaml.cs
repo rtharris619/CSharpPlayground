@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Security.Policy;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -24,6 +25,8 @@ namespace AsyncPlayground
     /// </summary>
     public partial class MainWindow : Window
     {
+        CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -33,7 +36,8 @@ namespace AsyncPlayground
         {
             var watch = System.Diagnostics.Stopwatch.StartNew();
 
-            RunDownloadSync();
+            var results = DemoMethods.RunDownloadParallelSync();
+            PrintResults(results);
 
             watch.Stop();
 
@@ -44,11 +48,20 @@ namespace AsyncPlayground
 
         private async void executeAsync_Click(object sender, RoutedEventArgs e)
         {
+            var progress = new Progress<ProgressReportModel>();
+            progress.ProgressChanged += ReportProgress;
+
             var watch = System.Diagnostics.Stopwatch.StartNew();
 
-            //await RunDownloadAsync();
-
-            await RunDownloadParallelAsync2();
+            try
+            {
+                var results = await DemoMethods.RunDownloadAsync(progress, cancellationTokenSource.Token);
+                PrintResults(results);
+            }
+            catch (OperationCanceledException)
+            {
+                resultsWindow.Text += $"The async download was cancelled { Environment.NewLine }";
+            }
 
             watch.Stop();
 
@@ -57,110 +70,41 @@ namespace AsyncPlayground
             resultsWindow.Text += $"Total execution time: {elapsedMs} {Environment.NewLine}";
         }
 
-        private List<string> PrepData()
+        private void ReportProgress(object? sender, ProgressReportModel e)
         {
-            var output = new List<string>();
-
-            resultsWindow.Text = $"Retrieving data...{ Environment.NewLine }";
-
-            output.Add("https://www.yahoo.com");
-            output.Add("https://www.google.com");
-
-            return output;
+            progressBar.Value = e.PercentageComplete;
+            PrintResults(e.SitesDownloaded);
         }
 
-        private void RunDownloadSync()
+        private async void executeParallelAsync_Click(object sender, RoutedEventArgs e)
         {
-            var websites = PrepData();
-            foreach (var site in websites) 
+            var progress = new Progress<ProgressReportModel>();
+            progress.ProgressChanged += ReportProgress;
+
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+
+            var results = await DemoMethods.RunDownloadParallelAsyncV2(progress);
+            PrintResults(results);
+
+            watch.Stop();
+
+            var elapsedMs = watch.ElapsedMilliseconds;
+
+            resultsWindow.Text += $"Total execution time: {elapsedMs} {Environment.NewLine}";
+        }
+
+        private void executeCancelOperation_Click(object sender, RoutedEventArgs e)
+        {
+            cancellationTokenSource.Cancel();
+        }
+
+        private void PrintResults(List<WebsiteDataModel> results)
+        {
+            resultsWindow.Text = $"Retrieving data...{Environment.NewLine}";
+            foreach (var data in results) 
             {
-                var results = DownloadWebsite(site);
-                ReportWebsiteInfo(results);
+                resultsWindow.Text += $"{data.WebsiteUrl} downloaded: {data.WebsiteData.Length} characters long.{Environment.NewLine}";
             }
-        }
-
-        private async Task RunDownloadAsync()
-        {
-            var websites = PrepData();
-            foreach (var site in websites)
-            {
-                var results = await Task.Run(() => DownloadWebsite(site));
-                ReportWebsiteInfo(results);
-            }
-        }
-
-        private async Task RunDownloadParallelAsync()
-        {
-            var websites = PrepData();
-            var tasks = new List<Task<WebsiteDataModel>>();
-
-            foreach (var site in websites)
-            {
-                tasks.Add(DownloadWebsiteAsync(site));
-            }
-
-            var results = await Task.WhenAll(tasks);
-
-            foreach (var item in results)
-            {
-                ReportWebsiteInfo(item);
-            }
-        }
-
-        private async Task RunDownloadParallelAsync2()
-        {
-            var websites = PrepData();
-            var tasks = new List<Task<WebsiteDataModel>>();
-
-            foreach (var site in websites)
-            {
-                tasks.Add(DownloadWebsiteAsync2(site));
-            }
-
-            var results = await Task.WhenAll(tasks);
-
-            foreach (var item in results)
-            {
-                ReportWebsiteInfo(item);
-            }
-        }
-
-        private WebsiteDataModel DownloadWebsite(string url)
-        {
-            var output = new WebsiteDataModel();
-            var client = new WebClient();
-
-            output.WebsiteUrl = url;
-            output.WebsiteData = client.DownloadString(url);
-
-            return output;
-        }
-
-        private async Task<WebsiteDataModel> DownloadWebsiteAsync(string url)
-        {
-            var output = new WebsiteDataModel();
-            var client = new WebClient();
-
-            output.WebsiteUrl = url;
-            output.WebsiteData = await client.DownloadStringTaskAsync(url);
-
-            return output;
-        }
-
-        private async Task<WebsiteDataModel> DownloadWebsiteAsync2(string url)
-        {
-            var output = new WebsiteDataModel();
-            var _httpClient = new HttpClient();
-
-            output.WebsiteUrl = url;
-            output.WebsiteData = await _httpClient.GetStringAsync(url);
-
-            return output;
-        }
-
-        private void ReportWebsiteInfo(WebsiteDataModel data)
-        {
-            resultsWindow.Text += $"{ data.WebsiteUrl } downloaded: { data.WebsiteData.Length } characters long.{ Environment.NewLine }";
         }
     }
 }

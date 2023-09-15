@@ -5,12 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AsyncPlayground"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="507" Width="800">
+    <Grid Margin="0,0,0,-6">
         <Label Content="Simple Async Demo Application" HorizontalAlignment="Left" Margin="23,10,0,0" VerticalAlignment="Top" Width="460"/>
         <Button x:Name="executeSync" Content="Normal Execute" HorizontalAlignment="Left" Margin="23,41,0,0" VerticalAlignment="Top" Width="746" Click="executeSync_Click"/>
-        <Button x:Name="executeAsync" Content="Async Execute" HorizontalAlignment="Left" Margin="23,75,0,0" VerticalAlignment="Top" Width="746" Click="executeAsync_Click"/>
-        <TextBlock x:Name="resultsWindow" HorizontalAlignment="Left" Margin="23,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="289" Width="746"/>
+        <Button x:Name="executeAsync" Content="Async Execute" HorizontalAlignment="Left" Margin="23,73,0,0" VerticalAlignment="Top" Width="746" Click="executeAsync_Click"/>
+        <TextBlock x:Name="resultsWindow" HorizontalAlignment="Left" Margin="23,221,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="256" Width="746"/>
+        <Button x:Name="executeParallelAsync" Content="Parallel Async Execute" HorizontalAlignment="Left" Margin="23,107,0,0" VerticalAlignment="Top" Width="746" Click="executeParallelAsync_Click"/>
+        <Button x:Name="executeCancelOperation" Content="Cancel Operation" HorizontalAlignment="Left" Margin="23,140,0,0" VerticalAlignment="Top" Width="746" Click="executeCancelOperation_Click"/>
+        <ProgressBar x:Name="progressBar" HorizontalAlignment="Left" Height="19" Margin="23,177,0,0" VerticalAlignment="Top" Width="746"/>
 
     </Grid>
 </Window>
