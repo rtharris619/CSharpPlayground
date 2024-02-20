@@ -23,13 +23,17 @@ using HangfireLib = CSharpPlayground.Libraries;
 
 using Randomise = CSharpPlayground.Randomise;
 
+using Strings = CSharpPlayground.Fundamentals.Strings;
+
+using Patters = CSharpPlayground.DesignPatterns.GOF.Creational.Singleton;
+
 namespace CSharpPlayground
 {
     public class Program
     {
         public static async Task Main()
         {
-            new Randomise.Randomise().Driver();
+            Patters.Driver.Run();
         }
     }
 }
