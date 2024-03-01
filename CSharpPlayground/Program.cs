@@ -23,9 +23,9 @@ using HangfireLib = CSharpPlayground.Libraries;
 
 using Randomise = CSharpPlayground.Randomise;
 
-using Strings = CSharpPlayground.Fundamentals.Strings;
+using WorkingWithNulls = CSharpPlayground.Fundamentals.WorkingWithNulls;
 
-using Patters = CSharpPlayground.DesignPatterns.GOF.Creational.Singleton;
+using Patters = CSharpPlayground.DesignPatterns.GOF.Creational.Factory;
 
 namespace CSharpPlayground
 {

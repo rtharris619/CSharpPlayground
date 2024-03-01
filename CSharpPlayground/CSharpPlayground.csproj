@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="DesignPatterns\SingleResponsibility\jounal.txt" />
+    <None Remove="SOLID\SingleResponsibility\jounal.txt" />
   </ItemGroup>
 
   <ItemGroup>

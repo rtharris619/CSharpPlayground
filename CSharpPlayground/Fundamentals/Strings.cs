@@ -12,7 +12,17 @@ namespace CSharpPlayground.Fundamentals
         public void Driver()
         {
             //GetSapProvidedByEntityName("902902 Lala Murrey Van Heerden");
-            ExtractDocumentIDs(new List<string> { "0412/00101576", "0426/00052724" });
+            //ExtractDocumentIDs(new List<string> { "0412/00101576", "0426/00052724" });
+
+            Extract3rdValue("905906-20240115-60635_BCA_INV.PDF");
+        }
+
+        public void Extract3rdValue(string input)
+        {
+            var fileNameSplit = input.Replace(".PDF", "", StringComparison.InvariantCulture).Split("-");
+            var lastBit = fileNameSplit[2][..fileNameSplit[2].IndexOf("_")];
+
+            Console.WriteLine(lastBit);
         }
 
         public void GetSapProvidedByEntityName(string input)
