@@ -25,7 +25,7 @@ using Randomise = CSharpPlayground.Randomise;
 
 using WorkingWithNulls = CSharpPlayground.Fundamentals.WorkingWithNulls;
 
-using Patters = CSharpPlayground.DesignPatterns.GOF.Creational.Factory;
+using Patters = CSharpPlayground.DesignPatterns.GOF.Creational.Builder;
 
 namespace CSharpPlayground
 {
