@@ -17,6 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Testing\Calculator\CalculatorTester.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="SOLID\SingleResponsibility\jounal.txt" />
   </ItemGroup>
 

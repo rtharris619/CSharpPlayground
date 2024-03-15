@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpPlayground", "CSharpP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncPlayground", "AsyncPlayground\AsyncPlayground.csproj", "{10C05C9E-2ECF-48C5-B097-C9D4CCCA5D78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitPlayground", "XUnitPlayground\XUnitPlayground.csproj", "{25A681B8-CC6D-40C1-AC31-823538671D5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{10C05C9E-2ECF-48C5-B097-C9D4CCCA5D78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10C05C9E-2ECF-48C5-B097-C9D4CCCA5D78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10C05C9E-2ECF-48C5-B097-C9D4CCCA5D78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25A681B8-CC6D-40C1-AC31-823538671D5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25A681B8-CC6D-40C1-AC31-823538671D5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25A681B8-CC6D-40C1-AC31-823538671D5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25A681B8-CC6D-40C1-AC31-823538671D5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

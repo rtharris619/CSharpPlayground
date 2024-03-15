@@ -27,13 +27,15 @@ using WorkingWithNulls = CSharpPlayground.Fundamentals.WorkingWithNulls;
 
 using Patters = CSharpPlayground.DesignPatterns.GOF.Creational.Builder;
 
+using Tester = CSharpPlayground.Testing.Calculator;
+
 namespace CSharpPlayground
 {
     public class Program
     {
         public static async Task Main()
         {
-            Patters.Driver.Run();
+            Tester.Driver.Run();
         }
     }
 }
