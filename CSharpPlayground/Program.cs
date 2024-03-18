@@ -25,7 +25,7 @@ using Randomise = CSharpPlayground.Randomise;
 
 using WorkingWithNulls = CSharpPlayground.Fundamentals.WorkingWithNulls;
 
-using Patters = CSharpPlayground.DesignPatterns.GOF.Creational.AbstractFactory;
+using Patterns = CSharpPlayground.DesignPatterns.GOF.Structural.Adapter;
 
 using Tester = CSharpPlayground.Testing.Calculator;
 
@@ -35,7 +35,7 @@ namespace CSharpPlayground
     {
         public static async Task Main()
         {
-            Patters.Driver.Run();
+            Patterns.Driver.Run();
         }
     }
 }
