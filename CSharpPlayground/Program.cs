@@ -25,9 +25,10 @@ using Randomise = CSharpPlayground.Randomise;
 
 using WorkingWithNulls = CSharpPlayground.Fundamentals.WorkingWithNulls;
 
-using Patterns = CSharpPlayground.DesignPatterns.GOF.Structural.Adapter;
+using Patterns = CSharpPlayground.DesignPatterns.GOF.Structural.Decorator;
 
 using Tester = CSharpPlayground.Testing.Calculator;
+using System.Reflection;
 
 namespace CSharpPlayground
 {
@@ -35,6 +36,8 @@ namespace CSharpPlayground
     {
         public static async Task Main()
         {
+            //Patterns.DocumentAccessor documentAccessor = new Patterns.DocumentAccessor();
+            //var temp = documentAccessor.FetchDocument("document2");
             Patterns.Driver.Run();
         }
     }
