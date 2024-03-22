@@ -25,7 +25,7 @@ using Randomise = CSharpPlayground.Randomise;
 
 using WorkingWithNulls = CSharpPlayground.Fundamentals.WorkingWithNulls;
 
-using Patterns = CSharpPlayground.DesignPatterns.GOF.Structural.Decorator;
+using Patterns = CSharpPlayground.DesignPatterns.GOF.Structural.Bridge;
 
 using Tester = CSharpPlayground.Testing.Calculator;
 using System.Reflection;
