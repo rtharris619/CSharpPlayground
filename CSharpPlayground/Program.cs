@@ -25,7 +25,7 @@ using Randomise = CSharpPlayground.Randomise;
 
 using WorkingWithNulls = CSharpPlayground.Fundamentals.WorkingWithNulls;
 
-using Patterns = CSharpPlayground.DesignPatterns.GOF.Structural.Bridge;
+using Patterns = CSharpPlayground.DesignPatterns.GOF.Behavioral.Strategy;
 
 using Tester = CSharpPlayground.Testing.Calculator;
 using System.Reflection;
@@ -36,8 +36,6 @@ namespace CSharpPlayground
     {
         public static async Task Main()
         {
-            //Patterns.DocumentAccessor documentAccessor = new Patterns.DocumentAccessor();
-            //var temp = documentAccessor.FetchDocument("document2");
             Patterns.Driver.Run();
         }
     }

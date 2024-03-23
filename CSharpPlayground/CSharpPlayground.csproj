@@ -29,8 +29,4 @@
     <PackageReference Include="Hangfire.MemoryStorage" Version="1.7.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="DesignPatterns\GOF\Behavioral\" />
-  </ItemGroup>
-
 </Project>
