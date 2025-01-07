@@ -135,9 +135,9 @@ namespace CSharpPlayground.FSharpForFun
         }
     }
 
-    public class FSharpForFunDriver
+    public static class FSharpForFunDriver
     {
-        public void Driver()
+        public static void Driver()
         {
             QuickSortExtension.Driver();
         }

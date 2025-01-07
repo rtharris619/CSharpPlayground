@@ -28,7 +28,10 @@ using WorkingWithNulls = CSharpPlayground.Fundamentals.WorkingWithNulls;
 using Patterns = CSharpPlayground.DesignPatterns.GOF.Behavioral.Template;
 
 using Tester = CSharpPlayground.Testing.Calculator;
-using System.Reflection;
+
+using FSharpForFunDriver = CSharpPlayground.FSharpForFun.FSharpForFunDriver;
+
+using Leetcodes = CSharpPlayground.Challenges.LeetCode;
 
 namespace CSharpPlayground
 {
@@ -36,7 +39,7 @@ namespace CSharpPlayground
     {
         public static async Task Main()
         {
-            Patterns.Driver.Run();
+            new Leetcodes.ArrayStringProblems().Driver();
         }
     }
 }
