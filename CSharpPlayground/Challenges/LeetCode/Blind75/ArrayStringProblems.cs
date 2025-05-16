@@ -113,11 +113,70 @@ public class MergeStringsAlternately
     }
 }
 
+// https://leetcode.com/problems/greatest-common-divisor-of-strings
+public class GCDStrings
+{
+    // The greatest common divisor must be a prefix of each string, so we can try all prefixes.
+    public string GcdOfStrings(string str1, string str2)
+    {
+        var result = "";
+
+        if (str1.Length % str2.Length > 0) return "";
+
+        var str2Current = str2;
+        var str1Current = str1;
+
+        var ratio = str1.Length / str2Current.Length; // 2
+
+        var indexShift = ratio + 1;
+
+        while (indexShift <= str1.Length)
+        {
+            var startsWith = str1Current.StartsWith(str2Current);
+
+            if (!startsWith) return "";
+
+            str1Current = str1.Substring(indexShift);
+
+            indexShift += indexShift;
+        }
+
+        return str2Current;
+    }
+
+    public void TestCases()
+    {
+        var str1 = "ABCABC";
+        var str2 = "ABC";
+        Console.WriteLine(GcdOfStrings(str1, str2)); // ABC
+
+        str1 = "ABABAB";
+        str2 = "ABAB";
+        Console.WriteLine(GcdOfStrings(str1, str2)); // AB
+
+        str1 = "LEET";
+        str2 = "CODE";
+        Console.WriteLine(GcdOfStrings(str1, str2)); // ""
+
+        str1 = "ABCDEF";
+        str2 = "ABC";
+        //Console.WriteLine(GcdOfStrings(str1, str2)); // ""
+    }
+
+    public void Solve()
+    {
+        TestCases();
+    }
+}
+
 public class ArrayStringProblems
 {
     public void Driver()
     {
-        var problem_1768 = new MergeStringsAlternately();
-        problem_1768.Solve();
+        //var problem_1768 = new MergeStringsAlternately();
+        //problem_1768.Solve();
+
+        var problem_1071 = new GCDStrings();
+        problem_1071.Solve();
     }
 }

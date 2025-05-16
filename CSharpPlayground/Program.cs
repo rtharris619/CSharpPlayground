@@ -33,13 +33,15 @@ using FSharpForFunDriver = CSharpPlayground.FSharpForFun.FSharpForFunDriver;
 
 using Leetcodes = CSharpPlayground.Challenges.LeetCode;
 
+using ApiKeyGenerator = CSharpPlayground.Cryptography.ApiKeyGenerator;
+
 namespace CSharpPlayground
 {
     public class Program
     {
         public static async Task Main()
         {
-            new Leetcodes.ArrayStringProblems().Driver();
+            new ApiKeyGenerator().Driver();
         }
     }
 }
