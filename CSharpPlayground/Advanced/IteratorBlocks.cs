@@ -1,4 +1,4 @@
-﻿namespace CSharpPlayground.Fundamentals.Generics;
+﻿namespace CSharpPlayground.Advanced;
 
 class IteratorBlocksImpl
 {

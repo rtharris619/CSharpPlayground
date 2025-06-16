@@ -36,7 +36,9 @@
 //using ApiKeyGenerator = CSharpPlayground.Cryptography.ApiKeyGenerator;
 
 //using Delegates = CSharpPlayground.Fundamentals.Delegates;
-using Generics = CSharpPlayground.Fundamentals.Generics;
+//using Generics = CSharpPlayground.Fundamentals.Generics;
+
+using Advanced = CSharpPlayground.Advanced;
 
 namespace CSharpPlayground
 {
@@ -44,7 +46,7 @@ namespace CSharpPlayground
     {
         public static async Task Main()
         {
-            Generics.IteratorBlocks.Driver();
+            Advanced.Generics.Driver();
         }
     }
 }
