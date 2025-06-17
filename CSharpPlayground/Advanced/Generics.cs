@@ -100,6 +100,68 @@ static class MyLinq
             value = fold(item, value);
         return value;
     }
+
+    public static IEnumerable<T> MyConcat<T>(this IEnumerable<T> first, IEnumerable<T> second)
+    {
+        foreach (var item in first)
+            yield return item;
+
+        foreach (var item in second)
+            yield return item;
+    }
+
+    public static IEnumerable<T> MyUnion<T>(
+        this IEnumerable<T> first,
+        IEnumerable<T> second)
+    {
+        return MyUnion(first, second, EqualityComparer<T>.Default);
+    }
+
+    public static IEnumerable<T> MyUnion<T>(
+        this IEnumerable<T> first,
+        IEnumerable<T> second,
+        IEqualityComparer<T> comparer)
+    {
+        var set = new HashSet<T>(comparer);
+
+        foreach (var item in first)
+            if (set.Add(item))
+                yield return item;
+        
+        foreach (var item in second)
+            if (set.Add(item))
+                yield return item;
+    }
+
+    public static IEnumerable<T> MyExcept<T>(
+        this IEnumerable<T> first,
+        IEnumerable<T> second)
+    {
+        var blacklist = new HashSet<T>(second);
+
+        foreach (var item in first)
+            if (blacklist.Add(item))
+                yield return item;
+    }
+
+    public static IEnumerable<T> MyIntersect<T>(
+        this IEnumerable<T> first,
+        IEnumerable<T> second)
+    {
+        var set = new HashSet<T>(first);
+
+        foreach (var item in second)
+            if (set.Remove(item))
+                yield return item;
+    }
+
+    public static Dictionary<TKey, TValue> MyToDictionary<TSource, TKey, TValue>(
+        this IEnumerable<TSource> source,
+        Func<TSource, TKey> keyProjection, 
+        Func<TSource, TValue> valueProjection)
+    {
+        return null;
+    }
 }
 
 class GenericsImpl
@@ -148,13 +210,34 @@ class GenericsImpl
         var countHarris = people.MyCount((p) => p.LastName.StartsWith("H"));
         Console.WriteLine(countHarris);
 
-        list = Enumerable.Range(1, 9);
+        list = Enumerable.Range(1, 10);
         var sum = list.MyAggregate(0, (num, i) => num + i);
         Console.WriteLine(sum);
 
         var list2 = new List<decimal> { 1.0M, 2.0M, 3.0M};
         var sum2 = list2.MyAggregate(0M, (num, i) => num + i);
         Console.WriteLine(sum2);
+
+        var max = list.MyAggregate(0, (num, i) => num > i ? num : i);
+        Console.WriteLine(max);
+
+        Console.WriteLine(string.Join(",", list.MyConcat(Enumerable.Range(11, 10))));
+
+        Console.WriteLine(string.Join(",", list.MyUnion(Enumerable.Range(1, 12))));
+
+        var list3 = new List<string> { "Hello", "World", "Stuff", "test" };
+        var list4 = new List<string> { "HELLO", "WORLD", "STUFF" };
+
+        Console.WriteLine(string.Join(", ", list4.MyUnion(list3, StringComparer.CurrentCultureIgnoreCase)));
+
+        var list5 = new List<int> { 1, 1, 2, 3, 4 };
+        Console.WriteLine(string.Join(", ", list5.MyExcept(new List<int> { 3, 4 })));
+
+        var list6 = new List<int> { 1, 2, 3, 3, 4, 5 };
+        Console.WriteLine(string.Join(", ", list6.MyIntersect(new List<int> { 2, 2, 3, 3, 10 })));
+
+        var list7 = Enumerable.Range(1, 10).ToDictionary(x => x, el => el);
+        Console.WriteLine(string.Join(", ", list7));
     }
 }
 
