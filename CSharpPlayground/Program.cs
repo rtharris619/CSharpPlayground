@@ -38,15 +38,13 @@
 //using Delegates = CSharpPlayground.Fundamentals.Delegates;
 //using Generics = CSharpPlayground.Fundamentals.Generics;
 
-using Advanced = CSharpPlayground.Advanced;
-
 namespace CSharpPlayground
 {
     public class Program
     {
         public static async Task Main()
         {
-            Advanced.Generics.Driver();
+            Advanced.Joins.Driver();
         }
     }
 }

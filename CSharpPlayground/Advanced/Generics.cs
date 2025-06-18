@@ -1,6 +1,8 @@
-﻿namespace CSharpPlayground.Advanced;
+﻿using System.Collections;
 
-static class MyLinq
+namespace CSharpPlayground.Advanced;
+
+static partial class MyLinq
 {
     public static IEnumerable<TResult> MySelect<TSource, TResult>(this IEnumerable<TSource> source, Func<TSource, TResult> projection)
     {
@@ -17,14 +19,10 @@ static class MyLinq
 
     public static TSource MyFirst<TSource>(this IEnumerable<TSource> source)
     {
-        using (var enumerator = source.GetEnumerator())
-        {
-            if (!enumerator.MoveNext())
-                throw new InvalidOperationException();
-            return enumerator.Current;
-        }
-
-        throw new InvalidOperationException("No matching element found.");
+        using var enumerator = source.GetEnumerator();
+        if (!enumerator.MoveNext())
+            throw new InvalidOperationException();
+        return enumerator.Current;
     }
 
     public static TSource MyFirst<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
@@ -157,10 +155,28 @@ static class MyLinq
 
     public static Dictionary<TKey, TValue> MyToDictionary<TSource, TKey, TValue>(
         this IEnumerable<TSource> source,
-        Func<TSource, TKey> keyProjection, 
-        Func<TSource, TValue> valueProjection)
+        Func<TSource, TKey> keySelector,
+        Func<TSource, TValue> valueSelector)
     {
-        return null;
+        var dictionary = new Dictionary<TKey, TValue>();
+
+        foreach (var item in source)
+            dictionary.Add(keySelector(item), valueSelector(item));
+
+        return dictionary;
+    }
+
+    public static IEnumerable<TResult> MyCast<TResult>(this IEnumerable source)
+    {
+        foreach (var item in source)
+            yield return (TResult) item;
+    }
+
+    public static IEnumerable<TResult> MyOfType<TResult>(this IEnumerable source)
+    {
+        foreach (var item in source)
+            if (item is TResult)
+                yield return (TResult) item;
     }
 }
 
@@ -236,8 +252,12 @@ class GenericsImpl
         var list6 = new List<int> { 1, 2, 3, 3, 4, 5 };
         Console.WriteLine(string.Join(", ", list6.MyIntersect(new List<int> { 2, 2, 3, 3, 10 })));
 
-        var list7 = Enumerable.Range(1, 10).ToDictionary(x => x, el => el);
-        Console.WriteLine(string.Join(", ", list7));
+        var firstnames2 = people.MyToDictionary(k => k.FirstName, v => v);
+        Console.WriteLine(string.Join(", ", firstnames2.Keys));
+
+        var objs = new[] { 1, 2, 3, 4, 5, 6 };
+        var xs = objs.MyCast<int>();
+        Console.WriteLine(string.Join(", ", xs));
     }
 }
 
