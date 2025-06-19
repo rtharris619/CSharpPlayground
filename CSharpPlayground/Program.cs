@@ -44,7 +44,7 @@ namespace CSharpPlayground
     {
         public static async Task Main()
         {
-            Advanced.Joins.Driver();
+            Advanced.Zips.Driver();
         }
     }
 }
